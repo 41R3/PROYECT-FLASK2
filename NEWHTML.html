@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="stylesheet" href="STYLE.css">
+  <script type="text/JavaScript">
+    function showMessage(){
+      var formacion = document.getElementById("formacion").value;
+      display_message1.innerHTML= formacion;
+        var carrera = document.getElementById("carrera").value;
+        display_message11.innerHTML= carrera;
+        var fecha = document.getElementById("fecha").value;
+        display_message12.innerHTML= fecha;
+      var aptitudes = document.getElementById("aptitudes").value;
+      display_message2.innerHTML= aptitudes;
+      var habilidades = document.getElementById("habilidades").value;
+      display_message3.innerHTML= habilidades;
+      var idiomas = document.getElementById("idiomas").value;
+      display_message4.innerHTML= idiomas;
+      var puesto = document.getElementById("puesto").value;
+      display_message5.innerHTML= puesto;
+        var lugar= document.getElementById("lugar").value;
+        display_message51.innerHTML= lugar;
+        var descripcion = document.getElementById("descripcion").value;
+        display_message52.innerHTML= descripcion;
+
+
+    }
+  </script>
+
+</head>
+<body>
+
+<form  id="formulario">
+    <br><h2>&nbsp;&nbsp;&nbsp;REGISTRO<br>
+    &nbsp;  &nbsp;    &nbsp;  &nbsp;    DE CV</h2>
+  <b>Formacion:</b></br>
+    <input type="text"  class="formacion" id = "formacion" placeholder="Institucion..." minlength="5" maxlength="30" pattern="[a-z]" required ><br>
+    <input type="text" id = "carrera" placeholder="carrera..." minlength="5"  maxlength="30" pattern="[a-z]" required><br>
+    <b>Ingreso </b> <input type="date" id = "fecha" placeholder="Desde"  required><br><br>
+  <b>Aptitudes: </b><br><input type="text"  id="aptitudes" minlength="5" maxlength="40" pattern="[a-z]" required><br>
+  <b>Habilidades:</b><br><input type="text"  id="habilidades" minlength="5" maxlength="40"  pattern="[a-z]" required><br><br>
+  <b>Idiomas:</b> <select  id="idiomas" required>
+                <option value="English">English</option>
+                <option value="Spanish">Spanish</option>
+           </select><br><br>
+  <b>Experiencia Laboral:</b><br><input type="text" id = "puesto" placeholder="Puesto..." minlength="5" maxlength="30" pattern="[a-z]" required> <br>
+    <input type="text" id = "lugar" placeholder="Empresa/o..." minlength="5" maxlength="30" pattern="[a-z]" required><br>
+    <textarea  id="descripcion" placeholder="Descripcion..." minlength="30" maxlength="150"  required></textarea><br>
+
+    <button type="submit"  class="submit" onclick="showMessage()">Registrar</button>
+
+</form>
+
+
+
+<div class="reg">
+    <div class="left">
+        <br><br><br><br>
+        <div class="idiomas">
+            <h2>Idiomas</h2>
+            <ul>
+                <li><span id = "display_message4"></span> </li>
+
+            </ul>
+        </div>
+        <div class="aptitud">
+            <h2>Aptitudes</h2>
+            <ul>
+                <li><span id = "display_message2"></span></li>
+
+            </ul>
+        </div>
+        <div class="habilidad">
+            <h2>Habilidades</h2>
+            <ul>
+                <li><span id = "display_message3"></span></li>
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="right">
+        <div class="name">
+            <h1>CV</h1>
+        </div>
+        <div class="formacion">
+            <h2>Formacion</h2>
+
+            <table>
+                <tr>
+                    <th> <span id = "display_message1" >&nbsp;</span></th>
+
+                </tr>
+                <tr>
+
+                    <td><b> Carrera:&nbsp;&nbsp;  &nbsp;</b> &nbsp;&nbsp;&nbsp;</td>
+                    <td><b> Fecha:</b> </td>
+
+                </tr>
+                <tr>
+                    <td><span id = "display_message11" ></span></td>
+                    <td>&nbsp;&nbsp;&nbsp;&nbsp;<span id = "display_message12" ></span></td>
+
+                </tr>
+            </table>
+        </div>
+        <div class="experiencia">
+            <h2>Experiencia Laboral</h2>
+            <p><b>Puesto:<span id = "display_message5"></span></b></p>
+            <p><b>Empresa: <span id = "display_message51"></span></b></p>
+            <ul>
+                <li><span id = "display_message52"></span></li>
+            </ul>
+        </div>
+
+
+    </div>
+</div>
+<script src="index.js"></script>
+</body>
+</html>
